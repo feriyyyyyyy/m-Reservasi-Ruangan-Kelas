@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Reservasi Ruangan Kelas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Sistem Reservasi Ruangan Kelas</h1>
+        
+        <!-- Daftar Ruangan -->
+        <section id="room-list" class="mb-5">
+            <h2 class="mb-3">Daftar Ruangan</h2>
+            <table class="table table-bordered table-hover table-sm" id="rooms-table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nomor Ruangan</th>
+                        <th>Kapasitas</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data ruangan akan ditambahkan di sini oleh JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulir Reservasi -->
+        <section id="reservation-form" class="mb-5">
+            <h2 class="mb-3">Formulir Reservasi</h2>
+            <form id="form" class="border p-4 rounded bg-light">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Nama Pemesan:</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="room-number" class="form-label">Nomor Ruangan:</label>
+                        <input type="number" class="form-control" id="room-number" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="date" class="form-label">Tanggal Reservasi:</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="start-time" class="form-label">Waktu Mulai:</label>
+                        <input type="time" class="form-control" id="start-time" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="duration" class="form-label">Durasi (jam):</label>
+                        <input type="number" class="form-control" id="duration" min="1" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Pesan Ruangan</button>
+                <p id="error-message" class="text-danger mt-3"></p>
+            </form>
+        </section>
+
+        <!-- Daftar Reservasi -->
+        <section id="reservation-list">
+            <h2 class="mb-3">Daftar Reservasi</h2>
+            <div id="reservations" class="list-group">
+                <!-- Data reservasi akan ditambahkan di sini oleh JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
